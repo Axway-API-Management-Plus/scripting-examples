@@ -9,7 +9,7 @@ but this filter requires some kind of special input parameters.
 
 The scripting filter creates the required attribute: `attribute.lookup.list` and can be
 combined into a policy like so:  
-![./images/sample-policy.png]
+![Sample-Policy](./images/sample-policy.png)
 
 ## Attribute: attribute.subject.id
 The authenticated user the SAML-Assertion should belong too.   
