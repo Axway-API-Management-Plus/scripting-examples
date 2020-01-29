@@ -19,8 +19,13 @@ Sample: sampleuser
 ## Attribute: attribute.lookup.list
 A list of attributes that should be part become part of the assertion. In fact, that list must be a  
 `java.lang.Map<String, RetrievedAttribute>`.   
-This basically looks like:   
-```{Key123=key=[Key123] name=[Key123] values=[Value123] namespace=[##nonamespace##] namespaceForAssertion=[urn:vordel:attribute:1.0] useForAssertion=[true], Key0815=key=[Key0815] name=[Key0815] values=[Value0815] namespace=[##nonamespace##] namespaceForAssertion=[urn:vordel:attribute:1.0] useForAssertion=[true]}```
+When Tracing the attribute you will see something like this:   
+```
+attribute.lookup.list {
+	Value: {Key123=key=[Key123] name=[Key123] values=[Value123] namespace=[##nonamespace##] namespaceForAssertion=[urn:vordel:attribute:1.0] useForAssertion=[true], Key0815=key=[Key0815] name=[Key0815] values=[Value0815] namespace=[##nonamespace##] namespaceForAssertion=[urn:vordel:attribute:1.0] useForAssertion=[true]}
+	Type: java.util.HashMap
+}
+```
 
 This creates a SAML Assertion like the following, that can be placed in an attribute of choice:  
 ```xml
