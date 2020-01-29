@@ -22,7 +22,7 @@ A list of attributes that should be part become part of the assertion. In fact, 
 This basically looks like:   
 ```{Key123=key=[Key123] name=[Key123] values=[Value123] namespace=[##nonamespace##] namespaceForAssertion=[urn:vordel:attribute:1.0] useForAssertion=[true], Key0815=key=[Key0815] name=[Key0815] values=[Value0815] namespace=[##nonamespace##] namespaceForAssertion=[urn:vordel:attribute:1.0] useForAssertion=[true]}```
 
-This create a SAML Assertion like so:  
+This creates a SAML Assertion like the following, that can be placed in an attribute of choice:  
 ```xml
 <saml:Assertion
     xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="Id-d4a3315e7303d90009bde218-2" IssueInstant="2020-01-29T15:25:08Z" Version="2.0">
@@ -70,7 +70,6 @@ m9jR76mpw+JZScho9L3VP7hR7u0znMFzDHZ9ijxOHVk=</enc:CipherValue>
     </saml:AttributeStatement>
 </saml:Assertion>
 ```
-That assertion can be placed in an attribute of choice.
 
 ## Script-Examples
 The following script is used to create the required attribute: `attribute.lookup.list`
