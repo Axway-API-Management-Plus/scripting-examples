@@ -17,18 +17,18 @@ If you would like to create a JWT with a header like so:
 ```
 you need to use a scripting filter as shown below.
 
-A sample policy may look like this:
+A sample policy may look like this:  
 ![Sample-Policy](./images/sample-policy.png)
 
-__Set JWT-Payload__
+__Set JWT-Payload__  
 ![Sample-Policy](./images/set-jwt-payload.png)
 
-__Set Required Attributes__
+__Set Required Attributes__  
 ![Sample-Policy](./images/set-attributes.png)
 
 ## Script-Examples
 
-You need to provide the following attributes:
+You need to provide the following attributes:  
 |Attribute-Name|Description|Example|
 |:-------------|:-----------|:---------------|
 |algorithm|The Signing-Alghorythm to use. Possible values are: [RS256, RS384, RS512, PS256, PS384, PS512]|RS256|
