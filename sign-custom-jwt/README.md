@@ -17,7 +17,7 @@ If you would like to create a JWT with a header like so:
 ```
 you need to use a scripting filter as shown below.
 
-A sample policy may look like this:  
+### Sample Policy ###
 ![Sample-Policy](./images/sample-policy.png)
 
 __Set JWT-Payload__  
