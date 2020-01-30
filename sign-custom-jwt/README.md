@@ -26,6 +26,15 @@ __Set JWT-Payload__
 __Set Required Attributes__  
 ![Sample-Policy](./images/set-attributes.png)
 
+__Trace Output__
+The Trace-Output shows the following JWT-Payload:  
+```
+jwt {
+     Value: eyJraWQiOiIxMjM0NTY3ODkiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.ew0KICAic3ViIjogIjEyMzQ1Njc4OTAiLA0KICAibmFtZSI6ICJKb2huIERvZSIsDQogICJpYXQiOiAxNTE2MjM5MDIyDQp9.lg6Fhz12DgIXAp9kLjNXPLvsZ8BitCs2N3l1ILDs9nS8r8GNyoFZFkkYUJvtGtdGBjrte-bYB6xzRTnnPPf-QqL84wKea94OehSBjnoZE2lfXDWpev1Qep3hiPbDeM-B0p3xCnVumP6u9xSEyiwaV06CTNOG1Ot-g7jprWB_oCNaMzPDacbX8nY3ZeiL5ykebmgAHHaGuKvb4MTg6wvcB0Qrg_TqsYzzwZlJd6ERqtdbmPzQC3uf3L988CKbOUyCoFhQcgq7aBxuWBlZMeWOygqXhrlejTO6hlvYvmrf0AqsXqqpS1WBqapeSFdmpaFpW9vigGYgha3Qy4KbxKBMdg
+     Type: java.lang.String
+}
+```
+
 ## Script-Examples
 
 You need to provide the following attributes:  
