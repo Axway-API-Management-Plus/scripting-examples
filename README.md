@@ -6,6 +6,8 @@ This repository contains a number of scripting examples to be used in a policy
 |Name|Description|
 |----|-----------|
 |[Create SAML Assertion](./create-saml-assertion)|Create a custom SAML-Assertion based on given attributes|
+|[Create Custom-JWT](./sign-custom-jwt)|Create a JWT with custom JWT-Headers|
+
 
 
 
