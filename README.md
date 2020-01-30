@@ -1,5 +1,6 @@
 # Scripting Examples
-This repository contains a number of scripting examples to be used in a policy
+
+This repository contains a number of scripting examples to be used in a policy for the Axway API-Gateway. We encourage everybody (Axway employees, partner and customers) to contribute to this repository, if you would like to share assets with the community. Also this repository is used in our documentation to link examples where appropriate.
 
 ## Overview
 
