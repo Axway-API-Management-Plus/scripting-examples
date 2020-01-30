@@ -50,7 +50,7 @@ You may extend the script code as you need in case you need to add any other cus
 
 ### Javascript
 ```javascript
-var imp = new JavaImporter(com.nimbusds.jose,com.nimbusds.jose.crypto, com.vordel.store.cert);
+var imp = new JavaImporter(com.nimbusds.jose,com.nimbusds.jose.crypto, com.vordel.store.cert, com.vordel.trace);
 with(imp) {
 	function invoke(msg) {
 		var algorithm = msg.get("algorithm");
@@ -59,6 +59,11 @@ with(imp) {
 		var certificateAlias = msg.get("certificateAlias");
 		var signAlgorithm = JWSAlgorithm.parse(algorithm);
 
+		var certificate = CertStore.getInstance().getPersonalInfoByAlias(certificateAlias);
+		if(certificate == null) {
+			Trace.error("No certificate found using certificateAlias: '"+certificateAlias+"'");
+			return false;
+		}
 		var privateKey = CertStore.getInstance().getPersonalInfoByAlias(certificateAlias).privateKey;
 		var signer = new RSASSASigner(privateKey);
 		var builder = new JWSHeader.Builder(signAlgorithm);
