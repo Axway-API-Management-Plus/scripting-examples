@@ -1,17 +1,13 @@
 # Scripting Examples
 This repository contains a number of scripting examples to be used in a policy
 
+## Overiew
+
 |Name|Description|
 |----|-----------|
 |[Create SAML Assertion](./create-saml-assertion)|Create a custom SAML-Assertion based on given attributes|
 
-## Changelog
-- 0.0.1 - 21.08.2019
-  - Initial version
 
-
-## Limitations/Caveats
-- Define a limit per Methods using different HTTP-Verbs
 
 ## Contributing
 
