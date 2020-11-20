@@ -8,8 +8,7 @@ This repository contains a number of scripting examples to be used in a policy f
 |----|-----------|
 |[Create SAML Assertion](./create-saml-assertion)|Create a custom SAML-Assertion based on given attributes|
 |[Create Custom-JWT](./sign-custom-jwt)|Create a JWT with custom JWT-Headers|
-
-
+|[Get private key](./get-priv-key-from-certstore)|Get private key from API-Gateway certificate store|
 
 
 ## Contributing
