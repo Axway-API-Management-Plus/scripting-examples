@@ -4,27 +4,18 @@ If you need a private key within you API-Gateway policy you can obtain it with t
 
 ## Script-Examples
 
-You need to provide the following attributes:  
-
-| Attribute&nbsp;Name | Description | Example |
-| ----------- | --------- | ------------- |
-| **algorithm** | The Signing-Alghorythm to use. Possible values are: [RS256, RS384, RS512, PS256, PS384, PS512] | RS256 |
-|**kid**|The Key-ID parameter|78678678687687|
-|**jwtPayload**|An attribute containing the JWT-Payload to sign.|`{"sub": "1234567890","name": "John Doe","iat": 1516239022}`|
-|**certificateAlias**|The certificate containing the private key to sign the JWT|CN=Change this for production|
-
-You may extend the script code as you need in case you need to add any other custom header.
+To get the Shorthand-Key you can use the ES-Explorer, search for the correct certificate and use the function get Shorthand key.
 
 ### Javascript
 ```javascript
-var imp = new JavaImporter(com.vordel.es.EntityStoreFactory, com.vordel.es.util.ShorthandKeyFinder, com.vordel.es.EntityStore, com.vordel.es.Entity, com.vordel.store.cert.CertStore);
+var imp = new JavaImporter(com.vordel.dwe.Service, com.vordel.common.crypto.PasswordCipher, com.vordel.es.util.ShorthandKeyFinder, com.vordel.es.EntityStore, com.vordel.es.Entity, com.vordel.store.cert.CertStore);
 with(imp) {
 	function invoke(msg) {
-		var es = EntityStoreFactory().getInstance();
+		var es = Service.getInstance().getStore();
 		var keyFinder = new ShorthandKeyFinder(es);
 		var certEntity = keyFinder.getEntity("/[Certificates]name=Certificate Store/[Certificate]dname=Samples Test Certificate");
 
-		var key = CertStore.getPrivateKey(certEntity, null);
+		var key = CertStore.getPrivateKey(certEntity, new PasswordCipher(""));
 
 		msg.put("key", key);
 		return true;
