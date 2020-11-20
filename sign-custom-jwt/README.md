@@ -46,7 +46,7 @@ You need to provide the following attributes:
 |**jwtPayload**|An attribute containing the JWT-Payload to sign.|`{"sub": "1234567890","name": "John Doe","iat": 1516239022}`|
 |**certificateAlias**|The certificate containing the private key to sign the JWT|CN=Change this for production|
 
-You may extend the script code as you need in case you need to add any other customer header.
+You may extend the script code as you need in case you need to add any other custom header.
 
 ### Javascript
 ```javascript
